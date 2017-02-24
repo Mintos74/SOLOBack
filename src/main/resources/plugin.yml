@@ -1,0 +1,19 @@
+name: SOLOBack
+version: "0.0.1"
+api: ["1.0.0"]
+author: solo
+main: solo.soloback.Main
+commands:
+  back:
+    aliases: ["백", "b"]
+    usage: /back
+    description: 마지막으로 텔레포트한 장소로 이동합니다.
+    permission: soloback.command.back
+
+permissions:
+  soloback:
+    children:
+      soloback.command:
+        children:
+          soloback.command.back:
+            default: true
